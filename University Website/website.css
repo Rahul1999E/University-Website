@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    padding:0;
+}
+/* Setting background image */
+.header
+{
+    height:100vh;
+    width:100vw;
+    /* Linear gradient always take to rgba */
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("./Images/banner.png");
+    background-size:100% 100%;
+}
+
+/* Logo Adjustment */
+nav img{
+    position: relative;
+    top: 10px;
+    width: 10rem;
+    height:2.5rem;
+    margin-left: 65px;
+}
+/* nav section */ 
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    position:relative;
+    top:0;
+}
+
+/* Navbar_section */
+
+.navbar_section ul li
+{
+   list-style: none;
+   display: inline-block; /* inline block makes the block element inline within the block we can also use inline here */
+   padding:8px 30px;
+
+}
+.navbar_section{
+    position:relative;
+    top: 20px;
+    padding:0 30px 0 0;
+}
+
+.navbar_section ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  /* padding:8px 35px; */
+  font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.navbar_section ul li a::after{
+   content:'';
+   width:0%;
+   height:2px;
+   background:#f44336;
+   display: block;
+   margin:auto;
+   transition: 0.5s;
+}
+.navbar_section ul li a:hover::after{
+    width:70%;
+}
+.textbox 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding:180px 50px;
+}
+.textbox h1
+{
+    font-size:4.5rem;
+    padding: 10px 0 10px 0;
+    color:white;
+    
+}
+.textbox p
+{
+    font-size:1.2rem;
+    padding: 10px 5 10px 0;
+    color:white;
+  
+}
+.hero-btn{
+    position: relative;
+    font-size: 1rem;
+    border: 1px solid white;
+    top: 50px;
+    padding:12px 34px;
+    color: white;
+    text-align: center;
+    border-radius: 10px; 
+    text-decoration: none;
+    cursor: pointer;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.hero-btn:hover{
+    border:1px solid rgb(245, 121, 6);
+    background: rgb(245, 121, 6);
+    transition:1s;
+}
+
+nav .fas{
+   /* margin:20px;*/
+    display:none;
+}
+
+/* adding media query for nav section */
+
+@media(max-width : 700px)
+{
+    .textbox h1
+{
+    font-size:2.5rem;
+    padding: 10px 0 10px 0;
+    color:white;
+    
+}
+.textbox p
+{
+    font-size:1rem;
+    padding: 10px 0 10px 0;
+    color:white;
+}
+.navbar_section
+{
+    position: absolute;
+     width:163px;
+     height:100vh;
+     background:rgb(255, 138, 4);
+     padding:-1px; 
+     right:-300px;    
+     top:0; 
+     z-index: 2; 
+     text-align: left; 
+     transition: 1s;
+                               
+    }
+
+nav .fas{
+
+    display:block;
+    color:white;
+    margin:10px;
+    font-size:22px;
+    cursor:pointer;
+    
+}
+
+.navbar_section ul{
+    padding:25px;
+}
+
+}
+
+            /* < ---------    Course Section -----------> */
+
+.course_section{
+   
+    width:80%;
+    margin:auto;
+    text-align: center;
+    padding-top: 100px;
+   
+}
+.h-primary{
+    font-family: 'Poppins', sans-serif;
+    font-weight:bolder;
+    font-size:33px;
+    font-weight: 600;
+}
+
+.p-primary {
+    color:#777;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    padding:10px;
+}
+
+.course_container{
+    margin-top: 5%;;
+    display :flex;
+    justify-content: space-between;
+    
+}
+.box{   
+    flex-basis:25%;
+    padding:30px;
+    background:#fff3f3;
+    /*
+    height:130px;
+    width:300px;
+     box-shadow:  50px 10px 10px #888888;
+    */
+    box-sizing: border-box;
+    border-radius: 15px;
+  
+   border:1px solid #fff3f3;
+    
+}
+.h4-primary
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 0px;
+   
+}
+.box:hover{
+
+    background: rgb(246, 237, 150);
+    /*
+    box-shadow:  0px 0px 0px white;
+    */
+    box-shadow:  5px 10px 50px #888888;
+
+    transition: 0.5s;
+   
+}
+
+/* <-------   Adding media query to courseSection ------------ > */
+
+@media(max-width : 700px)
+{
+    .course_container{
+        flex-direction: column;       
+    }
+    .box{
+        margin: 20px;
+    }
+}
+
+
+    /*<------------------Global Campus--------------------->*/
+.campus_section
+{
+    width:80%;
+    margin:auto;
+    text-align:center;
+    padding-top:100px;
+}
+
+/*
+.course_container{
+    display:flex;
+    justify-content: space-between;
+    margin-top:5%;
+}
+*/
+
+.image_box
+{   
+    flex-basis:32%;
+    border-radius: 20px;
+    margin-bottom:30px;
+    position: relative;
+    overflow: hidden;
+}
+.image_box img{
+    width:100%;    
+}
+
+.layer{
+    background:transparent;
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;   
+    transition:0.5s;
+  /*color:transparent; */
+}
+
+.layer:hover{
+    background: rgba(227,0,0,0.7);
+    color:white;
+  
+}
+
+.layer h3
+{
+    width:100%;
+    font-weight: 500;
+    font-size:26px;
+    color:#fff;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+    position:absolute;
+    opacity:0;
+    transition:0.5s;
+  
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity:1;
+}
+
+/* <----------------------  Facility Section --------------------> */
+.facility_section
+{
+    width:80%;
+    margin:auto;
+    text-align:center;
+    margin-top:100px;
+}
+
+.facility_container{
+
+    margin-top: 5%;;
+    display :flex;
+    justify-content: space-between;
+    
+}
+
+.facility_box{
+
+    flex-basis:32%;
+    border-radius: 20px;
+    margin-bottom:5%;
+   position: relative; 
+  overflow: hidden; 
+  box-sizing: border-box;
+   /* text-align: left;*/
+   
+}
+.facility_box img{
+    width:100%;
+}
+.facility_box h3{
+    margin-top: 1rem;
+}
